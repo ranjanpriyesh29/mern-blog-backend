@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors(
     {
-      origin: "http://localhost:5173", // default Vite port
+      origin: process.env.FRONTEND_URL || "http://localhost:5173", // default Vite port
       credentials: true,
     } // Allow credentials for cookies, authorization headers, or TLS client certificates
   )
